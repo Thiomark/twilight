@@ -70,7 +70,9 @@ const actions = {
         try {
             commit('SET_PRODUCT_LOADING', true);
             const response = await ProductService.getOne(id);
-            commit('SET_PRODUCT', response.data)
+            const updatedProducts = {...response.data, image: 'https://res.cloudinary.com/thiomark/image/upload/v1673353037/' + response.data.image[0]};
+            console.log(updatedProducts)
+            commit('SET_PRODUCT', updatedProducts)
             commit('SET_PRODUCT_LOADING', false);
         } catch (error) {}
     },
@@ -78,7 +80,8 @@ const actions = {
         try {
             commit('SET_PRODUCT_LOADING', true);
             const response = await ProductService.get(keyword, pageNumber);
-            commit('SET_PRODUCTS', response.data);
+            const updatedProducts = response.data.products.map(product => ({...product, image: 'https://res.cloudinary.com/thiomark/image/upload/v1673353037/' + product.image[0]}))
+            commit('SET_PRODUCTS', {...response.data, products: updatedProducts});
             commit('SET_PRODUCT_LOADING', false);
         } catch (error) {}
     },

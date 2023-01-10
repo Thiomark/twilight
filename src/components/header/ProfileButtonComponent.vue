@@ -8,7 +8,7 @@
             </div>
         </button>
         <div class="relative" @mouseleave="openMenu = false"  v-if="openMenu">
-            <div class="absolute right-0 z-20 w-48 mt-2 overflow-hidden bg-white rounded-md shadow-xl dark:bg-gray-700">
+            <div class="absolute border border-gray-200 right-0 z-20 w-48 mt-2 overflow-hidden bg-white rounded-md shadow-xl dark:bg-gray-700">
                 <router-link to="/favourites" class="block px-4 py-2 text-sm text-gray-800 border-b dark:text-gray-200 dark:border-gray-500 hover:bg-gray-200 dark:hover:bg-gray-600">Liked</router-link>
                 <router-link to="/profile/orders" class="block px-4 py-2 text-sm text-gray-800 border-b dark:text-gray-200 dark:border-gray-500 hover:bg-gray-200 dark:hover:bg-gray-600">Orders</router-link>
                 <router-link to="/profile/account" class="block px-4 py-2 text-sm text-gray-800 border-b dark:text-gray-200 dark:border-gray-500 hover:bg-gray-200 dark:hover:bg-gray-600">Personal Details</router-link>

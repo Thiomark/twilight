@@ -7,7 +7,8 @@
                     <div class="w-full animate-pulse bg-gray-300 h-96 rounded-md "></div>
                 </div>
                 <div v-if="!getProductLoading" class="px-6 flex items-center justify-center">
-                    <img :src="getProduct.image[0]" :alt="`Picture of ${getProduct.name}`">
+                    <img :src="getProduct.image" :alt="`Picture of ${getProduct.name}`">
+                    <!-- <img src="https://res.cloudinary.com/thiomark/image/upload/v1673353037/image-389038c7-6c3c-4c92-a94e-30bd760ac90f.png" :alt="`Picture of ${getProduct.name}`"> -->
                 </div>
                 <InformationComponent @reviews="scrollToReviews" v-if="!getProductLoading" class="p-6 pb-0 pt-12"/>
                 <ProductSkeleton v-if="getProductLoading" class="p-6 pb-0 pt-12"/>
