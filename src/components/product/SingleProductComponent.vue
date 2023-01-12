@@ -20,12 +20,12 @@
         <div class="w-full h-16 dark:bg-gray-800">
             <div class="relative w-full h-full">
                 <div @click.self="$router.push(`/product/${product._id}`)" class="absolute bg-white flex items-center justify-center z-10 w-full h-full">
-                    <div class="justify-center px-10 space-x-2 w-full flex items-center">
+                    <div class="justify-center px-10 space-x-2 w-full flex flex-col gap-1 items-center">
                         <div >
                             <h3 class="font-semibold text-xs text-center text-gray-700 uppercase dark:text-white">{{product.name}}</h3>
                         </div>
-                        <span class="font-semibold text-xs text-center text-gray-700 uppercase dark:text-white"> - </span>
-                        <h3 class="font-semibold text-xs text-center text-gray-700 uppercase dark:text-white">R{{product.price}}</h3>
+                        <!-- <span class="font-semibold text-xs text-center text-gray-700 uppercase dark:text-white"> - </span> -->
+                        <h3 class="text-xs font-bold text-center text-gray-700 uppercase dark:text-white">R{{product.price}}</h3>
                     </div>
                 </div>
                 <div :style="hover && { 'transform': 'translateY(-4rem)'} " class="hidden md:flex h-16 ease-in-out duration-300 w-full items-center absolute justify-center px-1">

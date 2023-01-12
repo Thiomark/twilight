@@ -4,7 +4,7 @@ const state = () => ({
     hideScrollBar: false,
     alerts: [],
     currency: 'R',
-    storeName: 'Brand'
+    storeName: 'twilight'
 })
   
 const mutations = {
