@@ -1,4 +1,3 @@
-Copy code
 # E-Commerce Clothes Store
 
 Welcome to our e-commerce clothes store, a full-stack web application built using Vue.js and Node.js. Our application allows users to browse, search, and purchase clothing items from a variety of categories. The database used for this application is MongoDB.
